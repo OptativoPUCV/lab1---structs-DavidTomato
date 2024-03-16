@@ -95,3 +95,17 @@ exercises.c:73:7: error: unused variable ‘result’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 c4971d4
+Sat 16 Mar 2024 08:40:23 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:73:17: error: dereferencing ‘void *’ pointer [-Werror]
+   73 |   result = (int)*malloc((size1 + size2) * sizeof(int));
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exercises.c:73:12: error: invalid use of void expression
+   73 |   result = (int)*malloc((size1 + size2) * sizeof(int));
+      |            ^
+cc1: all warnings being treated as errors
+Compilation failed
+ef8d4fc
