@@ -610,3 +610,20 @@ Sat 16 Mar 2024 09:29:54 PM UTC:
  tests:  0|3
 total_score: 40/70
 7bba8aa
+Sat 16 Mar 2024 10:39:52 PM UTC: 
+ exercises.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:105:15: error: unused variable ‘od’ [-Werror=unused-variable]
+  105 |   int oa = 1, od = 1;
+      |               ^~
+exercises.c:105:7: error: unused variable ‘oa’ [-Werror=unused-variable]
+  105 |   int oa = 1, od = 1;
+      |       ^~
+exercises.c:109:14: error: control reaches end of non-void function [-Werror=return-type]
+  109 |   return -2; }
+      |              ^
+cc1: all warnings being treated as errors
+Compilation failed
+909a050
