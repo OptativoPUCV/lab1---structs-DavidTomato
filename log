@@ -119,3 +119,19 @@ exercises.c:73:50: error: expected expression before ‘)’ token
       |                                                  ^
 Compilation failed
 11f278e
+Sat 16 Mar 2024 08:41:27 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:73:49: error: expected expression before ‘;’ token
+   73 |   result = (int)*malloc((size1 + size2) * sizeof;
+      |                                                 ^
+exercises.c:73:50: error: expected ‘;’ before ‘}’ token
+   73 |   result = (int)*malloc((size1 + size2) * sizeof;
+      |                                                  ^
+      |                                                  ;
+   74 |                        }
+      |                        ~                          
+Compilation failed
+aa26fa3
