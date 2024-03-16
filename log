@@ -208,3 +208,24 @@ Sat 16 Mar 2024 08:56:41 PM UTC:
  tests:  0|4
 total_score: 30/70
 739b5d5
+Sat 16 Mar 2024 09:07:07 PM UTC: 
+ exercises.c | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:96:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   96 |   return result
+      |          ^~~~~~
+exercises.c:72:6: note: declared here
+   72 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
+      |      ^~~~~~~~~~~~~~~~~
+exercises.c:96:16: error: expected ‘;’ before ‘}’ token
+   96 |   return result
+      |                ^
+      |                ;
+   97 | 
+   98 |                        }
+      |                        ~
+cc1: all warnings being treated as errors
+Compilation failed
+3a1cfbb
