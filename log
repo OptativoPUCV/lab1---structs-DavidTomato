@@ -531,3 +531,14 @@ exercises.c:73:28: note: previous definition of ‘result’ with type ‘int *�
       |                        ~~~~^~~~~~~~
 Compilation failed
 ad6de4e
+Sat 16 Mar 2024 09:27:43 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:74:11: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   74 |   *result = (int *)malloc((size1 + size2) * sizeof(int));
+      |           ^
+cc1: all warnings being treated as errors
+Compilation failed
+c20525e
