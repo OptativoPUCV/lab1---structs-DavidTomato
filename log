@@ -161,3 +161,23 @@ exercises.c:74:7: error: unused variable ‘result’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 c594b57
+Sat 16 Mar 2024 08:55:49 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:74:8: error: ‘result’ redeclared as different kind of symbol
+   74 |   int *result[] = (int *)malloc((size1 + size2) * sizeof(int));
+      |        ^~~~~~
+exercises.c:73:28: note: previous definition of ‘result’ with type ‘int *’
+   73 |                        int result[]) {
+      |                        ~~~~^~~~~~~~
+exercises.c:74:19: error: invalid initializer
+   74 |   int *result[] = (int *)malloc((size1 + size2) * sizeof(int));
+      |                   ^
+exercises.c:74:8: error: unused variable ‘result’ [-Werror=unused-variable]
+   74 |   int *result[] = (int *)malloc((size1 + size2) * sizeof(int));
+      |        ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9fb4d1d
