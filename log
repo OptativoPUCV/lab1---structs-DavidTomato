@@ -604,3 +604,9 @@ exercises.c:74:8: error: variable ‘result’ set but not used [-Werror=unused-
 cc1: all warnings being treated as errors
 Compilation failed
 820e5f6
+Sat 16 Mar 2024 09:29:54 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|3
+total_score: 40/70
+7bba8aa
