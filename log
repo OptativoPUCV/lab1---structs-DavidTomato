@@ -572,3 +572,35 @@ exercises.c:74:10: error: expected expression before ‘]’ token
       |          ^
 Compilation failed
 3605a70
+Sat 16 Mar 2024 09:28:39 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:74:8: error: ‘result’ redeclared as different kind of symbol
+   74 |   int *result[] = (int *)malloc((size1 + size2) * sizeof(int));
+      |        ^~~~~~
+exercises.c:73:28: note: previous definition of ‘result’ with type ‘int *’
+   73 |                        int result[]) {
+      |                        ~~~~^~~~~~~~
+exercises.c:74:19: error: invalid initializer
+   74 |   int *result[] = (int *)malloc((size1 + size2) * sizeof(int));
+      |                   ^
+exercises.c:78:17: error: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   78 |       result[z] = arr1[x];
+      |                 ^
+exercises.c:81:17: error: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   81 |       result[z] = arr2[y];
+      |                 ^
+exercises.c:87:15: error: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   87 |     result[z] = arr1[x];
+      |               ^
+exercises.c:92:15: error: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   92 |     result[z] = arr2[y];
+      |               ^
+exercises.c:74:8: error: variable ‘result’ set but not used [-Werror=unused-but-set-variable]
+   74 |   int *result[] = (int *)malloc((size1 + size2) * sizeof(int));
+      |        ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+820e5f6
