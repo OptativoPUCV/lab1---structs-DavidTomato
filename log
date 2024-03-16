@@ -320,3 +320,25 @@ exercises.c:72:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 cdf9447
+Sat 16 Mar 2024 09:13:14 PM UTC: 
+ exercises.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:95:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   95 |   return arr3;
+      |          ^~~~
+exercises.c:72:6: note: declared here
+   72 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2) {
+      |      ^~~~~~~~~~~~~~~~~
+test.c: In function ‘test_mergeSort’:
+test.c:204:3: error: too many arguments to function ‘mergeSortedArrays’
+  204 |   mergeSortedArrays(arr1, size1, arr2, size2, result);
+      |   ^~~~~~~~~~~~~~~~~
+In file included from test.c:1:
+exercises.c:72:6: note: declared here
+   72 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2) {
+      |      ^~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+68a2173

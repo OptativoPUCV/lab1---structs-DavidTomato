@@ -69,8 +69,7 @@ Descripción: Escribe una función que tome dos arreglos
 ordenados de menor a mayor y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado de menor a mayor.
 */
-void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
-                       int result[]) {
+void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2) {
   int *arr3 = (int *)malloc((size1 + size2) * sizeof(int));
   int x = 0, y = 0, z = 0;
   while (x < size1 && y < size2){
@@ -94,7 +93,6 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
     z++;
   }
   return arr3;
-  return NULL;
   
                        }
 
