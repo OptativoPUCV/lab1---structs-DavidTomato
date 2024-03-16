@@ -542,3 +542,23 @@ exercises.c:74:11: error: assignment to ‘int’ from ‘int *’ makes integer
 cc1: all warnings being treated as errors
 Compilation failed
 c20525e
+Sat 16 Mar 2024 09:28:04 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:74:7: error: ‘result’ redeclared as different kind of symbol
+   74 |   int result[] = (int *)malloc((size1 + size2) * sizeof(int));
+      |       ^~~~~~
+exercises.c:73:28: note: previous definition of ‘result’ with type ‘int *’
+   73 |                        int result[]) {
+      |                        ~~~~^~~~~~~~
+exercises.c:74:18: error: invalid initializer
+   74 |   int result[] = (int *)malloc((size1 + size2) * sizeof(int));
+      |                  ^
+exercises.c:74:7: error: variable ‘result’ set but not used [-Werror=unused-but-set-variable]
+   74 |   int result[] = (int *)malloc((size1 + size2) * sizeof(int));
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5572b2e
