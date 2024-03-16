@@ -181,3 +181,13 @@ exercises.c:74:8: error: unused variable ‘result’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 9fb4d1d
+Sat 16 Mar 2024 08:56:09 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:74:11: error: expected expression before ‘]’ token
+   74 |   *result[] = (int *)malloc((size1 + size2) * sizeof(int));
+      |           ^
+Compilation failed
+de50bde
