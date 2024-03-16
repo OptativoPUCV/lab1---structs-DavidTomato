@@ -52,3 +52,23 @@ exercises.c:73:8: error: unused variable ‘result’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 755d288
+Sat 16 Mar 2024 08:38:52 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:73:7: error: ‘result’ redeclared as different kind of symbol
+   73 |   int result = int*(malloc)((size1 + size2) * sizeof(int));
+      |       ^~~~~~
+exercises.c:72:73: note: previous definition of ‘result’ with type ‘int *’
+   72 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]) {
+      |                                                                     ~~~~^~~~~~~~
+exercises.c:73:16: error: expected expression before ‘int’
+   73 |   int result = int*(malloc)((size1 + size2) * sizeof(int));
+      |                ^~~
+exercises.c:73:7: error: unused variable ‘result’ [-Werror=unused-variable]
+   73 |   int result = int*(malloc)((size1 + size2) * sizeof(int));
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9ccef16
