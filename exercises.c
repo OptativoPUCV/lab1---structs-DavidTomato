@@ -9,14 +9,32 @@ Ejercicio 1: Encuentra el Elemento Mayor
 Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y devuelva el valor más grande del arreglo.
 */
-int findMax(int arr[], int size) { return 0; }
+int findMax(int arr[], int size) {
+  int max = arr[0];
+  for (int i = 1; i < size; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  return 0; }
+
 
 /*
 Ejercicio 2: Invertir un Arreglo
 Descripción: Escribe una función que tome un arreglo y su tamaño, y luego
 invierta el orden de sus elementos.
 */
-void reverseArray(int arr[], int size) {}
+void reverseArray(int arr[], int size) {
+  int x = 0;
+  int y = size - 1;
+  while (x < y){
+    int temp = arr[x];
+    arr[x] = arr[y];
+    arr[y] = temp;
+    x++;
+    y--;
+  }
+}
 
 /*
 Ejercicio 3: Filtrar Números Pares
@@ -26,7 +44,24 @@ los números pares del arreglo original.
 newsize apunta a una dirección válida que no ha sido inicializada con nigún valor específico. 
 *newsize debe almacenar el tamaño del nuevo arreglo que se retorna.
 */
-int *filterEvenNumbers(int arr[], int size, int *newSize) { return NULL; }
+int *filterEvenNumbers(int arr[], int size, int *newSize) { 
+  int contp = 0;
+  for (int i = 0; i < size; i++){
+    if (arr[i] % 2 == 0){
+      contp++;
+    }
+  }
+  int *pares = (int *)malloc(contp * sizeof(int));
+  int aux = 0;
+  for (int i = 0; i < size; i++) {
+    if (arr[i] % 2 == 0){
+      pares[aux] = arr[i];
+      aux++;
+    }
+  }
+  *newSize = contp;
+  return pares;
+  return NULL; }
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
