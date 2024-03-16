@@ -342,3 +342,23 @@ exercises.c:72:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 68a2173
+Sat 16 Mar 2024 09:14:44 PM UTC: 
+ exercises.c | 15 ++++++++-------
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:74:8: error: ‘result’ redeclared as different kind of symbol
+   74 |   int *result = (int *)malloc((size1 + size2) * sizeof(int));
+      |        ^~~~~~
+exercises.c:73:28: note: previous definition of ‘result’ with type ‘int *’
+   73 |                        int result[]) {
+      |                        ~~~~^~~~~~~~
+exercises.c:96:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   96 |   return result;
+      |          ^~~~~~
+exercises.c:72:6: note: declared here
+   72 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
+      |      ^~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a9e2347

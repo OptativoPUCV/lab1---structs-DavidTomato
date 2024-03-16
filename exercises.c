@@ -69,30 +69,31 @@ Descripción: Escribe una función que tome dos arreglos
 ordenados de menor a mayor y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado de menor a mayor.
 */
-void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2) {
-  int *arr3 = (int *)malloc((size1 + size2) * sizeof(int));
+void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
+                       int result[]) {
+  int *result = (int *)malloc((size1 + size2) * sizeof(int));
   int x = 0, y = 0, z = 0;
   while (x < size1 && y < size2){
     if (arr1[x] <= arr2[y]){
-      arr3[z] = arr1[x];
+      result[z] = arr1[x];
       x++;
     }else{
-      arr3[z] = arr2[y];
+      result[z] = arr2[y];
       y++;
     }
     z++;
   }
   while (x < size1){
-    arr3[z] = arr1[x];
+    result[z] = arr1[x];
     x++;
     z++;
   }
   while (y < size2){
-    arr3[z] = arr2[y];
+    result[z] = arr2[y];
     y++;
     z++;
   }
-  return arr3;
+  return result;
   
                        }
 
