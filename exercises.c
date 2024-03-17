@@ -104,20 +104,18 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 int checkSorted(int arr[], int size) {
   int oa = 0, od = 0;
   for (int i = 1; i < size - 1; i++){
-    if(arr[i]>arr[i-1]){
-      oa++;
-      break;
+    if(arr[i]<arr[i-1]){
+      od++;
     }
   }
   for (int i = 1; i < size - 1; i++){
-    if(arr[i]<arr[i-1]){
-      od++;
-      break;
+    if(arr[i]>arr[i-1]){
+      oa++;
     }
   }
-  if(oa==1 && od==1){
+  if(oa<size || od<size){
     return 0;
-  }else if(oa==1 && od==0){
+  }else if(oa==size){
     return 1;
   }else{
     return -1;
