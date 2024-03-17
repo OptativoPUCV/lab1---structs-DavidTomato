@@ -123,8 +123,6 @@ int checkSorted(int arr[], int size) {
     return 1;
   }
   
-  
-  
   return -2; }
 
 /*
@@ -147,7 +145,9 @@ typedef struct {
 } Libro;
 
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
-                      int anioNacimiento, int anioPublicacion) {}
+                      int anioNacimiento, int anioPublicacion) {
+  
+                      }
 
 /*
 Ejercicio 7: Lista enlazada de números
