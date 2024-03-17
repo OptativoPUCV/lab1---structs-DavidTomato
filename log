@@ -828,3 +828,13 @@ Sun 17 Mar 2024 02:45:12 AM UTC:
  tests:  0|3
 total_score: 40/70
 301afbc
+Sun 17 Mar 2024 02:45:45 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:118:17: error: expected expression before ‘=’ token
+  118 |   }else if((od===(size))){
+      |                 ^
+Compilation failed
+dfd0765
