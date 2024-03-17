@@ -114,9 +114,9 @@ int checkSorted(int arr[], int size) {
     }
   }
   if(oa>=(size)){
-    return 1;
-  }else if(od<=(size)){
     return -1;
+  }else if(od<=(size)){
+    return 1;
   }else{
     return 0;
   }
