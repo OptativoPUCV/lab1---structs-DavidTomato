@@ -797,3 +797,16 @@ Sun 17 Mar 2024 02:43:07 AM UTC:
  tests:  0|3
 total_score: 40/70
 aae970c
+Sun 17 Mar 2024 02:43:23 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:107:15: error: expected expression before ‘<’ token
+  107 |     if(arr[i]=<arr[i-1]){
+      |               ^
+exercises.c:112:15: error: expected expression before ‘>’ token
+  112 |     if(arr[i]=>arr[i-1]){
+      |               ^
+Compilation failed
+bcb4968
