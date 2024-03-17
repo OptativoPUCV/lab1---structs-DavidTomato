@@ -711,3 +711,23 @@ Sun 17 Mar 2024 02:32:16 AM UTC:
  tests:  0|3
 total_score: 40/70
 667f85e
+Sun 17 Mar 2024 02:32:59 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:116:19: error: expected ‘)’ before ‘{’ token
+  116 |   if(oa>=(size -1){
+      |     ~             ^
+      |                   )
+exercises.c:116:3: note: ‘-Wmisleading-indentation’ is disabled from this point onwards, since column-tracking was disabled due to the size of the code/headers
+  116 |   if(oa>=(size -1){
+      |   ^~
+exercises.c:116:3: note: adding ‘-flarge-source-files’ will allow for more column-tracking support, at the expense of compilation time and memory
+test.c:410:1: error: expected declaration or statement at end of input
+  410 | }
+      | ^
+test.c:411: error: control reaches end of non-void function [-Werror=return-type]
+cc1: all warnings being treated as errors
+Compilation failed
+1e65a8b
